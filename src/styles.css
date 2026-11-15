@@ -58,3 +58,5 @@
 .dialog-image{transition:opacity 180ms ease}
 @media(max-width:850px){.live-projects{margin-top:48px}.live-project-row .project-technology{display:none}}
 @media(max-width:600px){.live-projects-heading h3{font-size:28px}.live-projects-error{align-items:flex-start;flex-direction:column}.live-projects-error button{align-self:flex-end}}
+
+.header-shell{position:relative;z-index:10}

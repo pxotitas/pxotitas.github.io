@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const output = join(process.cwd(), "dist", "pxdritz-portfolio", "browser");
-const baseUrl = "https://pxdritz1.github.io";
+const output = join(process.cwd(), "dist", "pxotitas-portfolio", "browser");
+const baseUrl = "https://pxotitas.github.io";
 const lastModified = new Date().toISOString().slice(0, 10);
 
 const pages = [
@@ -23,9 +23,9 @@ const pages = [
     description: "Minecraft projects, developer tools, open-source software, and creative work by Chloe (pxdritz).",
     heading: "Ideas, made useful.",
     body: `<ul>
-      <li><a href="https://pxdritz1.github.io/BrainShake/">BrainShake</a> — a local-first freeform canvas for notes, sketches, and connected ideas.</li>
-      <li><a href="https://github.com/pxdritz1/rusted-light">Rusted Light</a> — a quick launcher for Linux, built with Rust and GTK4.</li>
-      <li><a href="https://github.com/pxdritz1/chloe-s-design-hub">Chloe’s design hub</a> — a growing home for creative tools.</li>
+      <li><a href="https://pxotitas.github.io/BrainShake/">BrainShake</a> — a local-first freeform canvas for notes, sketches, and connected ideas.</li>
+      <li><a href="https://github.com/pxotitas/rusted-light">Rusted Light</a> — a quick launcher for Linux, built with Rust and GTK4.</li>
+      <li><a href="https://github.com/pxotitas/chloe-s-design-hub">Chloe’s design hub</a> — a growing home for creative tools.</li>
       <li><a href="https://modrinth.com/user/pxotitas">Minecraft projects on Modrinth</a>.</li>
     </ul>`,
     section: "work",
@@ -52,7 +52,7 @@ const pages = [
     body: `<p>For a project, an art commission, or just a hello, find me through these public profiles:</p>
       <ul>
         <li><a href="https://discord.com/users/pxotitas">Discord — pxotitas</a></li>
-        <li><a href="https://github.com/pxdritz1">GitHub — pxdritz1</a></li>
+        <li><a href="https://github.com/pxotitas">GitHub — pxotitas</a></li>
         <li><a href="https://modrinth.com/user/pxotitas">Modrinth — pxotitas</a></li>
         <li><a href="https://ko-fi.com/pxdritz1">Ko-fi — pxdritz1</a></li>
         <li><a href="https://discord.gg/BDKNDHvjrD">Code’s Café</a></li>
@@ -84,6 +84,7 @@ for (const page of pages) {
     <meta name="author" content="Chloe (pxdritz)">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="${canonical}">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
     <meta property="og:site_name" content="pxdritz">
     <meta property="og:type" content="website">
@@ -110,7 +111,7 @@ for (const page of pages) {
         <a href="/">Home</a>
       </nav>
     </main>
-    <footer>Chloe / developer &amp; artist · <a href="https://github.com/pxdritz1">GitHub</a></footer>
+    <footer>Chloe / developer &amp; artist · <a href="https://github.com/pxotitas">GitHub</a></footer>
   </body>
 </html>`;
   await writeFile(join(directory, "index.html"), html);

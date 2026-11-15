@@ -23,10 +23,12 @@ jobs:
         run: npm ci
       - name: build and generate SEO pages
         run: npm run build
-      - name: verify Angular output and SEO pages
+      - name: verify React output and SEO pages
         run: |
-          output=dist/pxdritz-portfolio/browser
+          output=dist/pxotitas-portfolio/browser
           test -s "$output/index.html"
+          test -s "$output/assets/favicon.svg"
+          test -s "$output/assets/favicon.png"
           test -s "$output/projects/index.html"
           test -s "$output/gallery/index.html"
           test -s "$output/about/index.html"
@@ -36,4 +38,4 @@ jobs:
           grep -q 'name="description"' "$output/index.html"
           grep -q 'application/ld+json' "$output/index.html"
           grep -q "BrainShake" "$output/projects/index.html"
-          grep -q "Cujos" "$output/gallery/index.html"
+          grep -q "Jolyne" "$output/gallery/index.html"

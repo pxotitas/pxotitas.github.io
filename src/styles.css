@@ -60,3 +60,9 @@
 @media(max-width:600px){.live-projects-heading h3{font-size:28px}.live-projects-error{align-items:flex-start;flex-direction:column}.live-projects-error button{align-self:flex-end}}
 
 .header-shell{position:relative;z-index:10}
+
+/* Hero title layout is structural, not dependent on animation preferences. */
+.hero h1>.title-line{display:block}
+.hero h1>.title-line-primary{color:var(--ink);font-weight:590}
+.hero h1>.title-line-secondary{color:#85858b;font-weight:500}
+@media(prefers-reduced-motion:reduce){.js-motion [data-type-reveal]{opacity:1;transform:none;clip-path:none}}
